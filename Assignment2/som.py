@@ -1,6 +1,5 @@
 import SimpSOM as som
 import numpy as np
-from .. Dataset import active_learning
 
 filename = 'Data/pendigits.tra'
 raw_data = open(filename, 'rt')
@@ -14,5 +13,5 @@ net.train(0.01, 1000)
 net.save('weights')
 net.nodes_graph(colnum=0)
 net.diff_graph()
-net.project(raw_data, labels=labels)
-net.cluster(raw_data, type='qthresh')	
+net.project(data_without_label, labels=labels)
+net.cluster(data_without_label, type='qthresh')
