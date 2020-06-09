@@ -4,8 +4,8 @@ import numpy as np
 filename = 'Data/pendigits.tra'
 raw_data = open(filename, 'rt')
 data = np.loadtxt(raw_data, delimiter=",")
-data_without_label = data[:100,:16]
-labels = data[:100,16]
+data_without_label = data[:2000,:16]
+labels = data[:2000,16]
 
 #30x30 SOM with periodic boundary conditions
 net = som.somNet(30, 30, data_without_label, PBC=True)
