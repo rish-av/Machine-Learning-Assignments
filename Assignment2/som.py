@@ -1,3 +1,7 @@
+#please install following before you run the code
+#pip install SimpSOM
+
+
 import SimpSOM as som
 import numpy as np
 
